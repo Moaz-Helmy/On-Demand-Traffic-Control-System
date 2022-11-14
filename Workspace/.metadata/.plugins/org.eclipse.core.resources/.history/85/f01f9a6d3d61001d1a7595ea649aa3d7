@@ -1,0 +1,47 @@
+ /******************************************************************************
+ *
+ * Module: Application
+ *
+ * File Name: app.h
+ *
+ * Description: Header file for the application layer
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+#ifndef APP_H_
+#define APP_H_
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "std_types.h"
+#include "led.h"
+
+/*******************************************************************************
+ *                      Preprocessor Macros                                    *
+ *******************************************************************************/
+#define CAR_LEDS_PORT_ID 		PORTA_ID
+#define PEDESTRIANS_PORT_ID		PORTB_ID
+#define GREEN_LED				PIN0_ID
+#define YELLOW_LED				PIN1_ID
+#define RED_LED					PIN2_ID
+
+/*******************************************************************************
+ *                         Types Declaration                                   *
+ *******************************************************************************/
+/*ENUMS, STRUCTURES, UNIONS*/
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*
+ * Description :
+ */
+void app_start();
+
+void setup_LEDs();
+void button_callback();
+void timer1_callback();
+#endif /* APP_H_ */

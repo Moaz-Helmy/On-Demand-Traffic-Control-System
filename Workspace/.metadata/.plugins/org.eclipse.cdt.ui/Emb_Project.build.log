@@ -1,0 +1,46 @@
+01:00:29 **** Build of configuration Debug for project Emb_Project ****
+make all 
+Building file: ../MCAL/external_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/external_interrupts.d" -MT"MCAL/external_interrupts.o" -c -o "MCAL/external_interrupts.o" "../MCAL/external_interrupts.c"
+../MCAL/external_interrupts.c: In function 'EXT_Interrupts_interruptSetup':
+../MCAL/external_interrupts.c:74: warning: function return types not compatible due to 'volatile'
+../MCAL/external_interrupts.c:80: warning: function return types not compatible due to 'volatile'
+../MCAL/external_interrupts.c:88: warning: function return types not compatible due to 'volatile'
+../MCAL/external_interrupts.c:95: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/external_interrupts.c
+ 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+Finished building: ../MCAL/gpio.c
+ 
+Building file: ../MCAL/timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/timer0.d" -MT"MCAL/timer0.o" -c -o "MCAL/timer0.o" "../MCAL/timer0.c"
+../MCAL/timer0.c: In function 'Timer0_setCallBack':
+../MCAL/timer0.c:124: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/timer0.c
+ 
+Building file: ../MCAL/timer1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/timer1.d" -MT"MCAL/timer1.o" -c -o "MCAL/timer1.o" "../MCAL/timer1.c"
+../MCAL/timer1.c: In function 'Timer1_setCallBack':
+../MCAL/timer1.c:126: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/timer1.c
+ 
+Building file: ../HAL/led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/led.d" -MT"HAL/led.o" -c -o "HAL/led.o" "../HAL/led.c"
+Finished building: ../HAL/led.c
+ 
+Building file: ../Application/app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Application/app.d" -MT"Application/app.o" -c -o "Application/app.o" "../Application/app.c"
+Finished building: ../Application/app.c
+ 
+make: *** No rule to make target `app.o', needed by `Emb_Project.elf'.  Stop.
+"make all" terminated with exit code 2. Build might be incomplete.
+
+01:00:31 Build Failed. 1 errors, 6 warnings. (took 2s.526ms)
+

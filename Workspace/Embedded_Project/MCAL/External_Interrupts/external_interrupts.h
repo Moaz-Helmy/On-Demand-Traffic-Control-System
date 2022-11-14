@@ -1,0 +1,51 @@
+/******************************************************************************
+ *
+ * Module: External Interrupts
+ *
+ * File Name: external_interrupts.h
+ *
+ * Description: Header file for
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+#ifndef EXTERNAL_INTERRUPTS_H_
+#define EXTERNAL_INTERRUPTS_H_
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "../../Definitions_and_Macros/std_types.h"
+#include "../../Definitions_and_Macros/common_macros.h"
+#include <avr/io.h>
+
+/*******************************************************************************
+ *                         Types Declaration                                   *
+ *******************************************************************************/
+typedef enum{
+	EXT_INTERRUPT_ERROR,EXT_INTERRUPT_SUCCESS
+}EXT_Interrupts_FunctionState;
+
+typedef enum{
+	EXT_INT0,EXT_INT1,EXT_INT2
+}EXT_Interrupts_IntSelect;
+
+typedef enum{
+	EXT_LOW_LEVEL, EXT_ANY_LOGICAL_CHANGE, EXT_FALLING_EDGE, EXT_RISING_EDGE
+}EXT_Interrupts_EdgeSelect;
+
+typedef struct{
+	EXT_Interrupts_IntSelect INT;
+	EXT_Interrupts_EdgeSelect Edge;
+	void(*callBackPtr)(void);
+}EXT_Interrupts_ConfigType;
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*
+ * Description : This function enables the desired external interrupt with the desired interrupt trigger, besides setting the callback function.
+ */
+EXT_Interrupts_FunctionState EXT_Interrupts_interruptSetup(EXT_Interrupts_ConfigType* ConfigStruct);
+
+#endif /* EXTERNAL_INTERRUPTS_H_*/

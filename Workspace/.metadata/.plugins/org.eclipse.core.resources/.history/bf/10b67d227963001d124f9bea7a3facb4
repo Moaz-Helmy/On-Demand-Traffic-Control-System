@@ -1,0 +1,60 @@
+ /******************************************************************************
+ *
+ * Module: LED Module
+ *
+ * File Name: led.h
+ *
+ * Description: Header file for LED Module
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+#ifndef LED_H_
+#define LED_H_
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "../Definitions_and_Macros/std_types.h"
+#include "../MCAL/gpio.h"
+
+/*******************************************************************************
+ *                      Preprocessor Macros                                    *
+ *******************************************************************************/
+#define LED_ON		LOGIC_HIGH
+#define LED_OFF 	LOGIC_LOW
+
+/*******************************************************************************
+ *                         Types Declaration                                   *
+ *******************************************************************************/
+
+typedef enum {
+	LED_ERROR,LED_SUCCESS
+}LED_FunctionState;
+
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*
+ * Description : This function is responsible for setting up a led to be connected to a specific port and pin in the mcu.
+ */
+LED_FunctionState LED_setup(uint8 port_num, uint8 pin_num);
+
+/*
+ * Description : This function is responsible for turning on a led via gpio driver.
+ */
+void LED_on(uint8 port_num, uint8 pin_num);
+
+/*
+ * Description : This function is responsible for turning off a led via gpio driver.
+ */
+void LED_off(uint8 port_num, uint8 pin_num);
+
+/*
+ * Description : This function is responsible for toggling a led via gpio driver.
+ */
+void LED_toggle(uint8 port_num, uint8 pin_num);
+
+#endif /* LED_H_ */

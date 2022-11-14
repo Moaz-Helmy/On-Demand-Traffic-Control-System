@@ -1,0 +1,9 @@
+/*
+ * external_interrupts.c
+ *
+ *  Created on: Nov 9, 2022
+ *      Author: ZIZO
+ */
+#include <avr/interrupt.h>
+#include "external_interrupts.h"
+

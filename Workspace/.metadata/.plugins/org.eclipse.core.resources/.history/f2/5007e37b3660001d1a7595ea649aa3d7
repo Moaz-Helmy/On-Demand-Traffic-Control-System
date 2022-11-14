@@ -1,0 +1,51 @@
+ /******************************************************************************
+ *
+ * Module: External Interrupts
+ *
+ * File Name: external_interrupts.h
+ *
+ * Description: Header file for
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+#ifndef EXTERNAL_INTERRUPTS_H_
+#define EXTERNAL_INTERRUPTS_H_
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "std_types.h"
+
+/*******************************************************************************
+ *                      Preprocessor Macros                                    *
+ *******************************************************************************/
+ /*#DEFINES*/
+ /*MACROS*/
+
+/*******************************************************************************
+ *                         Types Declaration                                   *
+ *******************************************************************************/
+typedef enum{
+	EXT_INTERRUPT_ERROR,EXT_INTERRUPT_SUCCESS
+}EXT_Interrupts_FunctionState;
+
+typedef enum{
+	INT0,INT1,INT2
+}EXT_Interrupts_IntSelect;
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*
+ * Description :
+ */
+EXT_Interrupts_FunctionState EXT_Interrupts_interruptSetup(EXT_Interrupts_IntSelect INT)
+{
+	if(INT>2 || INT<0)
+	{
+		return EXT_INTERRUPT_ERROR;
+	}
+}
+
+
+#endif /* EXTERNAL_INTERRUPTS_H_*/

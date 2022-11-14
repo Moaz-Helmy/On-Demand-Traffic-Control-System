@@ -1,0 +1,72 @@
+ /******************************************************************************
+ *
+ * Module: Application
+ *
+ * File Name: app.c
+ *
+ * Description: Source file for the application layer
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "app.h"
+#include "led.h"
+#include "external_interrupts.h"
+#include "timer1.h"
+#include <assert.h>
+
+/*******************************************************************************
+ *                           Global Variables                                  *
+ *******************************************************************************/
+
+
+/*******************************************************************************
+ *                       Interrupt Service Routines                            *
+ *******************************************************************************/
+
+
+/*******************************************************************************
+ *                     Static Functions Prototypes                             *
+ *******************************************************************************/
+/*
+ * Description :
+ */
+
+/*******************************************************************************
+ *                      Static Functions Definitions                           *
+ *******************************************************************************/
+
+
+/*******************************************************************************
+ *                      Functions Definitions                                  *
+ *******************************************************************************/
+/*
+ * Description :
+ */
+void app_start()
+{
+	EXT_Interrupts_ConfigType EXT_Interrupt_Struct={
+			EXT_INT0,EXT_RISING_EDGE,button_callback
+	};
+	setup_LEDs();
+	assert(EXT_Interrupts_interruptSetup(&EXT_Interrupt_Struct));
+}
+void setup_LEDs()
+{
+	uint8 pin_index=0;
+
+	for(pin_index=0; pin_index<3; pin_index++)
+	{
+		assert(LED_setup(CAR_LEDS_PORT_ID, pin_index)==LED_SUCCESS);
+		assert(LED_setup(PEDESTRIANS_PORT_ID, pin_index)==LED_SUCCESS);
+	}
+}
+
+void button_callback()
+{
+
+}

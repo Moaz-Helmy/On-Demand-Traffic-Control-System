@@ -1,0 +1,66 @@
+ /******************************************************************************
+ *
+ * Module: Application
+ *
+ * File Name: app.h
+ *
+ * Description: Header file for the application layer
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+#ifndef APP_H_
+#define APP_H_
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "../Definitions_and_Macros/std_types.h"
+#include "../HAL/led.h"
+
+/*******************************************************************************
+ *                      Preprocessor Macros                                    *
+ *******************************************************************************/
+#define CAR_LEDS_PORT_ID 		PORTA_ID
+#define PEDESTRIANS_PORT_ID		PORTB_ID
+#define GREEN_LED				PIN0_ID
+#define YELLOW_LED				PIN1_ID
+#define RED_LED					PIN2_ID
+
+/*******************************************************************************
+ *                         Types Declaration                                   *
+ *******************************************************************************/
+typedef enum{
+	GREEN,YELLOW,RED
+}LED_State;
+
+typedef enum{
+	ENTERING_PEDESTRIANS, RETURNING_TO_NORMAL,INITIALIZING_FOR_NORMAL
+}Mode_Switching;
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*
+ * Description : This functions starts the application.
+ */
+void app_start();
+
+/*
+ * Description : This functions configure the pins that are connected to the leds as output pins
+ */
+void setup_LEDs();
+
+/*
+ * Description : This functions contains the logic of the instructions to be executed when the button triggers an interrupt.
+ */
+void button_callBack();
+
+/*
+ * Description : This functions contains the logic of the instructions to be executed when Timer1 triggers an interrupt.
+ */
+void timer1_callBack();
+void timer0_callBack();
+void reinitializeForNormalMode();
+#endif /* APP_H_ */

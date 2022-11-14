@@ -1,0 +1,38 @@
+12:33:12 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5112 bytes (15.6% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:33:14 Build Finished. 0 errors, 0 warnings. (took 1s.984ms)
+

@@ -1,0 +1,98 @@
+/******************************************************************************
+ *
+ * Module: Main Function
+ *
+ * File Name: main.c
+ *
+ * Description: Source file for the main function
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "../Application/app.h"
+#include "../HAL/led.h"
+#include "../MCAL/external_interrupts.h"
+#include "../MCAL/timer1.h"
+#include "../MCAL/timer0.h"
+#include "../MCAL/gpio.h"
+#include <util/delay.h> /*Used for testing only*/
+#include <avr/io.h>
+
+/*******************************************************************************
+ *                                Test Functions                               *
+ *******************************************************************************/
+void Timer0_callbacktest()
+{
+	LED_setup(CAR_LEDS_PORT_ID, YELLOW_LED);
+	LED_on(CAR_LEDS_PORT_ID,YELLOW_LED);
+	_delay_ms(250);
+	LED_off(CAR_LEDS_PORT_ID, YELLOW_LED);
+}
+void Timer0_test()
+{
+	static Timer0_ConfigType Timer0_Struct={
+			0,0,TIMER0_F_CPU_256,TIMER0_NORMAL_MODE
+	};
+	Timer0_setCallBack(Timer0_callbacktest);
+	Timer0_init(&Timer0_Struct);
+
+}
+void Timer1_callbacktest()
+{
+	LED_setup(CAR_LEDS_PORT_ID, YELLOW_LED);
+	LED_toggle(CAR_LEDS_PORT_ID,YELLOW_LED);
+
+}
+void Timer1_test()
+{
+	static Timer1_ConfigType Timer1_Struct={
+			0,31250,TIMER1_F_CPU_256,TIMER1_COMPARE_MODE
+	};
+	Timer1_setCallBack(Timer1_callbacktest);
+	Timer1_init(&Timer1_Struct);
+}
+
+void LED_test()
+{
+	uint8 pin_index=0;
+
+	for(pin_index=0; pin_index<3; pin_index++)
+	{
+		LED_setup(CAR_LEDS_PORT_ID, pin_index);
+		LED_setup(PEDESTRIANS_PORT_ID, pin_index);
+	}
+	LED_on(PORTA_ID,PIN0_ID);
+	LED_on(PORTA_ID,PIN1_ID);
+	LED_on(PORTA_ID,PIN2_ID);
+	LED_on(PORTB_ID,PIN0_ID);
+	LED_on(PORTB_ID,PIN1_ID);
+	LED_on(PORTB_ID,PIN2_ID);
+	_delay_ms(1000);
+	LED_off(PORTA_ID,PIN0_ID);
+	LED_off(PORTA_ID,PIN1_ID);
+	LED_off(PORTA_ID,PIN2_ID);
+	LED_off(PORTB_ID,PIN0_ID);
+	LED_off(PORTB_ID,PIN1_ID);
+	LED_off(PORTB_ID,PIN2_ID);
+}
+void external_interrupt_test()
+{
+	EXT_Interrupts_ConfigType EXT_Interrupt_Struct={
+			EXT_INT0,EXT_FALLING_EDGE,LED_test
+	};
+	EXT_Interrupts_interruptSetup(&EXT_Interrupt_Struct);
+}
+
+
+int main(void)
+{
+	SREG|=(1<<7);
+	Timer0_test();
+	//app_start();
+
+	while(1);
+}

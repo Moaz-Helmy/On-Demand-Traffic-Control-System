@@ -1,0 +1,76 @@
+ /******************************************************************************
+ *
+ * Module: LED Module
+ *
+ * File Name: led.c
+ *
+ * Description: Source file for LED Module
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "led.h"
+#include "../MCAL/GPIO/gpio.h"
+
+/*******************************************************************************
+ *                      Functions Definitions                                  *
+ *******************************************************************************/
+/*
+ * Description : This function is responsible for setting up a led to be connected to a specific port and pin in the mcu.
+ */
+LED_FunctionState LED_setup(uint8 port_num, uint8 pin_num)
+{
+	if(port_num>3 || pin_num>7 )
+	{
+		return LED_ERROR;
+	}
+	else
+	{
+		if(GPIO_setupPinDirection(port_num, pin_num, PIN_OUTPUT)== GPIO_SUCCESS)
+		{
+			LED_off(port_num, pin_num);
+			return LED_SUCCESS;
+		}
+		else
+		{
+			return LED_ERROR;
+		}
+
+	}
+}
+
+/*
+ * Description : This function is responsible for turning on a led via gpio driver.
+ */
+void LED_on(uint8 port_num, uint8 pin_num)
+{
+	GPIO_writePin(port_num, pin_num, LED_ON);
+}
+
+/*
+ * Description : This function is responsible for turning off a led via gpio driver.
+ */
+void LED_off(uint8 port_num, uint8 pin_num)
+{
+	GPIO_writePin(port_num, pin_num, LED_OFF);
+}
+
+/*
+ * Description : This function is responsible for toggling a led via gpio driver.
+ */
+void LED_toggle(uint8 port_num, uint8 pin_num)
+{
+	uint8 value=GPIO_readPin(port_num, pin_num);
+	if(value== LED_ON)
+	{
+		GPIO_writePin(port_num, pin_num, LED_OFF);
+	}
+	else
+	{
+		GPIO_writePin(port_num, pin_num, LED_ON);
+	}
+}

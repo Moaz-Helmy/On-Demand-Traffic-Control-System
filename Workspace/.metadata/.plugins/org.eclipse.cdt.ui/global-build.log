@@ -1,0 +1,946 @@
+01:46:05 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8560 bytes (26.1% Full)
+(.text + .data + .bootloader)
+
+Data:         56 bytes (2.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:46:58 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Main_Function/main.c: In function 'Timer0_callbacktest':
+../Main_Function/main.c:30: warning: type defaults to 'int' in declaration of 'interrupt_counter'
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8600 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:47:08 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8600 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:48:25 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8602 bytes (26.3% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:49:15 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8600 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:49:43 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8600 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:50:00 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8592 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:50:43 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Main_Function/main.c: In function 'main':
+../Main_Function/main.c:102: error: expected ';' before 'while'
+make: *** [Main_Function/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:50:46 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8596 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:53:05 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8592 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:54:37 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8592 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:56:16 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8592 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:57:29 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8592 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:58:49 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8570 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:01:09 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8570 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:33:35 **** Clean-only build of configuration Debug for project Embedded_Project ****
+make clean 
+rm -rf  Embedded_Project.hex  ./Main_Function/main.o  ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/timer0.o ./MCAL/timer1.o  ./HAL/led.o  ./Application/app.o  sizedummy  Embedded_Project.lss  ./Main_Function/main.d  ./MCAL/external_interrupts.d ./MCAL/gpio.d ./MCAL/timer0.d ./MCAL/timer1.d  ./HAL/led.d  ./Application/app.d  Embedded_Project.elf
+ 
+19:33:37 **** Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building file: ../MCAL/Timer1/timer1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/Timer1/timer1.d" -MT"MCAL/Timer1/timer1.o" -c -o "MCAL/Timer1/timer1.o" "../MCAL/Timer1/timer1.c"
+../MCAL/Timer1/timer1.c: In function 'Timer1_setCallBack':
+../MCAL/Timer1/timer1.c:126: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/Timer1/timer1.c
+ 
+Building file: ../MCAL/Timer0/timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/Timer0/timer0.d" -MT"MCAL/Timer0/timer0.o" -c -o "MCAL/Timer0/timer0.o" "../MCAL/Timer0/timer0.c"
+../MCAL/Timer0/timer0.c: In function 'Timer0_setCallBack':
+../MCAL/Timer0/timer0.c:124: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/Timer0/timer0.c
+ 
+Building file: ../MCAL/GPIO/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GPIO/gpio.d" -MT"MCAL/GPIO/gpio.o" -c -o "MCAL/GPIO/gpio.o" "../MCAL/GPIO/gpio.c"
+Finished building: ../MCAL/GPIO/gpio.c
+ 
+Building file: ../MCAL/External_Interrupts/external_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/External_Interrupts/external_interrupts.d" -MT"MCAL/External_Interrupts/external_interrupts.o" -c -o "MCAL/External_Interrupts/external_interrupts.o" "../MCAL/External_Interrupts/external_interrupts.c"
+../MCAL/External_Interrupts/external_interrupts.c: In function 'EXT_Interrupts_interruptSetup':
+../MCAL/External_Interrupts/external_interrupts.c:74: warning: function return types not compatible due to 'volatile'
+../MCAL/External_Interrupts/external_interrupts.c:80: warning: function return types not compatible due to 'volatile'
+../MCAL/External_Interrupts/external_interrupts.c:88: warning: function return types not compatible due to 'volatile'
+../MCAL/External_Interrupts/external_interrupts.c:95: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/External_Interrupts/external_interrupts.c
+ 
+Building file: ../HAL/led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/led.d" -MT"HAL/led.o" -c -o "HAL/led.o" "../HAL/led.c"
+Finished building: ../HAL/led.c
+ 
+Building file: ../Application/app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Application/app.d" -MT"Application/app.o" -c -o "Application/app.o" "../Application/app.c"
+Finished building: ../Application/app.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8570 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:34:13 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8570 bytes (26.2% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:39:28 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:41:25 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:42:31 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:22:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:30:27 **** Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building file: ../HAL/led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/led.d" -MT"HAL/led.o" -c -o "HAL/led.o" "../HAL/led.c"
+Finished building: ../HAL/led.c
+ 
+Building file: ../Application/app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Application/app.d" -MT"Application/app.o" -c -o "Application/app.o" "../Application/app.c"
+Finished building: ../Application/app.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:30:55 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:31:32 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:34:32 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:35:07 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:37:14 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+In file included from ../Main_Function/main.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9016 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         58 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:33:12 **** Incremental Build of configuration Debug for project Embedded_Project ****
+make all 
+Building file: ../Main_Function/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Main_Function/main.d" -MT"Main_Function/main.o" -c -o "Main_Function/main.o" "../Main_Function/main.c"
+Finished building: ../Main_Function/main.c
+ 
+Building target: Embedded_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Embedded_Project.map -mmcu=atmega32 -o "Embedded_Project.elf"  ./Main_Function/main.o  ./MCAL/Timer1/timer1.o  ./MCAL/Timer0/timer0.o  ./MCAL/GPIO/gpio.o  ./MCAL/External_Interrupts/external_interrupts.o  ./HAL/led.o  ./Application/app.o   
+Finished building target: Embedded_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Embedded_Project.elf  >"Embedded_Project.lss"
+Finished building: Embedded_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Embedded_Project.elf  "Embedded_Project.hex"
+Finished building: Embedded_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Embedded_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5112 bytes (15.6% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
